@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 520" role="img" aria-label="Portada Metodologias Agiles en Web">
+  <rect width="360" height="520" rx="28" fill="#315f52"/>
+  <path d="M92 178h176M92 254h176M92 330h176" stroke="#f6f1e8" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="92" cy="178" r="32" fill="#c47a4b"/>
+  <circle cx="180" cy="254" r="32" fill="#c47a4b"/>
+  <circle cx="268" cy="330" r="32" fill="#c47a4b"/>
+  <text x="42" y="430" fill="#fffaf2" font-family="Arial" font-size="38" font-weight="900">Agiles</text>
+  <text x="42" y="470" fill="#f0c69e" font-family="Arial" font-size="32" font-weight="800">en Web</text>
+</svg>

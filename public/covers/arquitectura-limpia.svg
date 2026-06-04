@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 520" role="img" aria-label="Portada Arquitectura Limpia en Frontend">
+  <rect width="360" height="520" rx="28" fill="#f6f1e8"/>
+  <rect x="42" y="76" width="276" height="310" rx="18" fill="#172033"/>
+  <path d="M80 330h200M92 286h176M104 242h152M116 198h128M128 154h104" stroke="#c47a4b" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="180" cy="104" r="28" fill="#315f52"/>
+  <text x="42" y="438" fill="#172033" font-family="Arial" font-size="30" font-weight="800">Arquitectura</text>
+  <text x="42" y="474" fill="#315f52" font-family="Arial" font-size="31" font-weight="800">Limpia</text>
+</svg>

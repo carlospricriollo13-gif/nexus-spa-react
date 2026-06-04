@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 520" role="img" aria-label="Portada UX para Bibliotecas Universitarias">
+  <rect width="360" height="520" rx="28" fill="#315f52"/>
+  <rect x="50" y="92" width="260" height="250" rx="22" fill="#fffaf2"/>
+  <path d="M88 156h124M88 198h172M88 240h132" stroke="#172033" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="260" cy="276" r="36" fill="#c47a4b"/>
+  <path d="M244 276l14 14 26-32" fill="none" stroke="#fffaf2" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="42" y="414" fill="#fffaf2" font-family="Arial" font-size="64" font-weight="900">UX</text>
+  <text x="42" y="456" fill="#fffaf2" font-family="Arial" font-size="27" font-weight="800">Bibliotecas</text>
+  <text x="42" y="488" fill="#f0c69e" font-family="Arial" font-size="24" font-weight="800">Universitarias</text>
+</svg>

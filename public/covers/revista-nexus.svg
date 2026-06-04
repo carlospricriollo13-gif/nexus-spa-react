@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 520" role="img" aria-label="Portada Revista Nexus Investigacion">
+  <rect width="360" height="520" rx="28" fill="#172033"/>
+  <rect x="32" y="70" width="296" height="154" rx="18" fill="#c47a4b"/>
+  <rect x="32" y="244" width="130" height="178" rx="18" fill="#315f52"/>
+  <rect x="182" y="244" width="146" height="178" rx="18" fill="#f6f1e8"/>
+  <text x="54" y="152" fill="#fffaf2" font-family="Arial" font-size="46" font-weight="900">NEXUS</text>
+  <text x="42" y="468" fill="#fffaf2" font-family="Arial" font-size="30" font-weight="800">Investigacion</text>
+</svg>

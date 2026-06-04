@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 520" role="img" aria-label="Portada Diseno de Sistemas Visuales">
+  <rect width="360" height="520" rx="28" fill="#fffaf2"/>
+  <rect x="58" y="96" width="108" height="108" rx="24" fill="#172033"/>
+  <rect x="194" y="96" width="108" height="108" rx="24" fill="#315f52"/>
+  <rect x="58" y="232" width="108" height="108" rx="24" fill="#c47a4b"/>
+  <rect x="194" y="232" width="108" height="108" rx="24" fill="#78d8f7"/>
+  <text x="42" y="414" fill="#172033" font-family="Arial" font-size="34" font-weight="900">Sistemas</text>
+  <text x="42" y="456" fill="#315f52" font-family="Arial" font-size="34" font-weight="900">Visuales</text>
+</svg>

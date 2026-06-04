@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 520" role="img" aria-label="Portada Co-working Academico">
+  <rect width="360" height="520" rx="28" fill="#c47a4b"/>
+  <rect x="50" y="120" width="260" height="170" rx="22" fill="#172033"/>
+  <circle cx="112" cy="184" r="30" fill="#f6f1e8"/>
+  <circle cx="180" cy="184" r="30" fill="#f6f1e8"/>
+  <circle cx="248" cy="184" r="30" fill="#f6f1e8"/>
+  <rect x="82" y="248" width="196" height="26" rx="13" fill="#315f52"/>
+  <text x="42" y="410" fill="#fffaf2" font-family="Arial" font-size="34" font-weight="900">Co-working</text>
+  <text x="42" y="452" fill="#172033" font-family="Arial" font-size="33" font-weight="900">Academico</text>
+</svg>

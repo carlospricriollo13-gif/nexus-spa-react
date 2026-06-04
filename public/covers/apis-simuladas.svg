@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 520" role="img" aria-label="Portada Gestion de APIs Simuladas">
+  <rect width="360" height="520" rx="28" fill="#0f172a"/>
+  <rect x="50" y="100" width="260" height="220" rx="20" fill="#172033" stroke="#78d8f7" stroke-width="6"/>
+  <text x="78" y="168" fill="#78d8f7" font-family="Consolas, monospace" font-size="28" font-weight="800">GET /books</text>
+  <text x="78" y="216" fill="#f6f1e8" font-family="Consolas, monospace" font-size="25">{ data }</text>
+  <text x="78" y="264" fill="#c47a4b" font-family="Consolas, monospace" font-size="28" font-weight="800">200 OK</text>
+  <text x="42" y="420" fill="#f6f1e8" font-family="Arial" font-size="34" font-weight="900">APIs</text>
+  <text x="42" y="462" fill="#78d8f7" font-family="Arial" font-size="31" font-weight="800">Simuladas</text>
+</svg>
