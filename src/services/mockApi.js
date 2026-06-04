@@ -2,6 +2,12 @@ import { books as fallbackBooks, categories as fallbackCategories, purchasedBook
 
 const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:3001';
 const fallbackReservations = [];
+const fallbackPurchases = purchasedBookIds.map((bookId, index) => ({
+  id: index + 1,
+  userId: 1,
+  bookId,
+  date: '2026-05-21',
+}));
 
 async function request(path, options) {
   const response = await fetch(`${API_URL}${path}`, {
@@ -88,7 +94,8 @@ export async function getPurchasedBooks() {
     const purchasedIds = purchases.map((purchase) => Number(purchase.bookId));
     return books.filter((book) => purchasedIds.includes(Number(book.id)));
   } catch {
-    return fallbackBooks.filter((book) => purchasedBookIds.includes(Number(book.id)));
+    const purchasedIds = fallbackPurchases.map((purchase) => Number(purchase.bookId));
+    return fallbackBooks.filter((book) => purchasedIds.includes(Number(book.id)));
   }
 }
 
@@ -103,6 +110,11 @@ export async function purchaseBook(id) {
     });
   } catch {
     purchase = { id: Date.now(), userId: 1, bookId: Number(id), date: new Date().toISOString().slice(0, 10) };
+    const alreadyPurchased = fallbackPurchases.some((item) => Number(item.bookId) === Number(id));
+
+    if (!alreadyPurchased) {
+      fallbackPurchases.push(purchase);
+    }
   }
 
   return { ok: true, book, purchase };
