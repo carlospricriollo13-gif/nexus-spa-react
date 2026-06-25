@@ -10,14 +10,17 @@ export default function SpaceDetailPage() {
   if (!space) return <p>No se encontro el espacio solicitado.</p>;
 
   return (
-    <section className="card detail-card">
-      <p className="eyebrow">Detalle de co-working</p>
-      <h1>{space.name}</h1>
-      <p>{space.description}</p>
-      <p><strong>Capacidad:</strong> {space.capacity} personas</p>
-      <p><strong>Estado:</strong> {space.occupied ? `Ocupado por ${space.occupiedBy} de ${space.from} a ${space.until}` : 'Disponible'}</p>
-      <p><strong>Equipamiento:</strong> {space.equipment.join(', ')}</p>
-      <Link className="button" to={`/reservar/${space.id}`}>Reservar espacio</Link>
+    <section className="detail">
+      <img className="space-image" src={space.image} alt={`Imagen referencial de ${space.name}`} />
+      <div className="card detail-card">
+        <p className="eyebrow">Detalle de co-working</p>
+        <h1>{space.name}</h1>
+        <p>{space.description}</p>
+        <p><strong>Capacidad:</strong> {space.capacity} personas</p>
+        <p><strong>Estado:</strong> {space.occupied ? `Ocupado por ${space.occupiedBy} de ${space.from} a ${space.until}` : 'Disponible'}</p>
+        <p><strong>Equipamiento:</strong> {space.equipment.join(', ')}</p>
+        <Link className="button" to={`/reservar/${space.id}`}>Reservar espacio</Link>
+      </div>
     </section>
   );
 }

@@ -43,6 +43,7 @@ label { display: grid; gap: 0.4rem; font-weight: 700; }
 
 .detail { align-items: start; display: flex; gap: 2rem; }
 .detail-card { max-width: 760px; }
+.space-image { border-radius: 28px; box-shadow: 0 16px 24px rgba(23, 32, 51, 0.16); max-width: 420px; object-fit: cover; width: 42%; }
 .form-page { display: grid; min-height: 70vh; place-items: center; }
 .form { display: grid; gap: 1rem; max-width: 460px; width: 100%; }
 .error { color: #b42318; font-weight: 800; }
@@ -80,6 +81,7 @@ label { display: grid; gap: 0.4rem; font-weight: 700; }
   .sidebar { position: static; }
   .detail { flex-direction: column; }
   .large { max-width: 100%; width: min(100%, 260px); }
+  .space-image { max-height: 320px; max-width: 100%; width: 100%; }
   .reservations-panel { overflow-x: auto; }
   .reservations-table { min-width: 560px; }
 }

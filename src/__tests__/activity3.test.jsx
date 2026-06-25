@@ -74,6 +74,7 @@ const space = {
   occupiedBy: 'Maria Lopez',
   from: '09:00',
   until: '11:30',
+  image: 'https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=900&q=80',
   equipment: ['Pantalla', 'Pizarra'],
   description: 'Mesa amplia para sesiones de equipo.',
 };
@@ -233,6 +234,7 @@ describe('Actividad 3 - componentes probados con React Testing Library', () => {
     );
 
     expect(await screen.findByRole('heading', { name: space.name })).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: /imagen referencial de mesa colaborativa a/i })).toBeInTheDocument();
     expect(screen.getByText(/pantalla, pizarra/i)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /reservar espacio/i })).toHaveAttribute('href', '/reservar/1');
   });

@@ -184,6 +184,7 @@
       "occupiedBy": "Maria Lopez",
       "from": "09:00",
       "until": "11:30",
+      "image": "https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=900&q=80",
       "equipment": [
         "Pantalla",
         "Pizarra",
@@ -199,6 +200,7 @@
       "occupiedBy": null,
       "from": null,
       "until": null,
+      "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
       "equipment": [
         "Aislamiento acustico",
         "Lampara regulable"
@@ -213,6 +215,7 @@
       "occupiedBy": "Grupo DataLab",
       "from": "10:00",
       "until": "13:00",
+      "image": "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=80",
       "equipment": [
         "Proyector",
         "Pizarra movil",
@@ -228,6 +231,7 @@
       "occupiedBy": null,
       "from": null,
       "until": null,
+      "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
       "equipment": [
         "Tomas USB",
         "Sillas ergonomicas"
@@ -242,6 +246,7 @@
       "occupiedBy": "Semillero Nexus",
       "from": "08:30",
       "until": "12:00",
+      "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80",
       "equipment": [
         "Monitores",
         "Red cableada",
@@ -257,6 +262,7 @@
       "occupiedBy": null,
       "from": null,
       "until": null,
+      "image": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80",
       "equipment": [
         "Luz natural",
         "Toma electrica"
