@@ -30,8 +30,8 @@ label { display: grid; gap: 0.4rem; font-weight: 700; }
 .book-card:hover { box-shadow: 0 20px 42px rgba(23, 32, 51, 0.14); transform: translateY(-3px); transition: 160ms ease; }
 .book-card .card-actions { justify-content: space-between; }
 .book-info h3 { line-height: 1.15; margin: 0.25rem 0 0.5rem; }
-.book-cover { aspect-ratio: 9 / 13; background: #172033; border-radius: 18px; box-shadow: 0 16px 24px rgba(23, 32, 51, 0.16); display: block; object-fit: cover; width: 100%; }
-.large { border-radius: 28px; max-width: 320px; width: 320px; }
+.book-cover { aspect-ratio: 9 / 13; background: #172033; border-radius: 18px; box-shadow: 0 16px 24px rgba(23, 32, 51, 0.16); display: block; justify-self: center; max-height: 280px; object-fit: cover; width: min(100%, 190px); }
+.large { border-radius: 28px; max-height: none; max-width: 280px; width: 280px; }
 
 .catalog-layout { align-items: start; display: grid; gap: 1.5rem; grid-template-columns: 280px 1fr; }
 .sidebar { background: #fffaf2; border-radius: 22px; display: grid; gap: 0.8rem; padding: 1.25rem; position: sticky; top: 92px; }
@@ -79,7 +79,7 @@ label { display: grid; gap: 0.4rem; font-weight: 700; }
   .catalog-layout { grid-template-columns: 1fr; }
   .sidebar { position: static; }
   .detail { flex-direction: column; }
-  .large { max-width: 100%; width: 100%; }
+  .large { max-width: 100%; width: min(100%, 260px); }
   .reservations-panel { overflow-x: auto; }
   .reservations-table { min-width: 560px; }
 }
