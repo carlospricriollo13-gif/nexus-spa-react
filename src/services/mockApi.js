@@ -159,16 +159,39 @@ export async function getSpaceById(id) {
 export async function reserveSpace(id, form) {
   const space = await getSpaceById(id);
   let reservation;
+  const reservedSpace = {
+    ...space,
+    occupied: true,
+    occupiedBy: fallbackUser.name,
+    from: form.from,
+    until: form.until,
+  };
 
   try {
     reservation = await request('/reservations', {
       method: 'POST',
       body: JSON.stringify({ userId: 1, spaceId: Number(id), ...form }),
     });
+
+    await request(`/spaces/${id}`, {
+      method: 'PATCH',
+      body: JSON.stringify({
+        occupied: true,
+        occupiedBy: fallbackUser.name,
+        from: form.from,
+        until: form.until,
+      }),
+    });
   } catch {
     reservation = { id: Date.now(), userId: 1, spaceId: Number(id), ...form };
     fallbackReservations.push(reservation);
+
+    const index = fallbackSpaces.findIndex((item) => Number(item.id) === Number(id));
+
+    if (index >= 0) {
+      fallbackSpaces[index] = reservedSpace;
+    }
   }
 
-  return { ok: true, space, reservation };
+  return { ok: true, space: reservedSpace, reservation };
 }
