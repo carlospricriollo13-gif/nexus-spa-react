@@ -46,24 +46,24 @@ vi.mock('../context/AuthContext.jsx', () => ({
 
 const book = {
   id: 1,
-  title: 'React Aplicado a Componentes',
-  author: 'Laura Vidal',
+  title: 'Clean Code',
+  author: 'Robert C. Martin',
   category: 'Ingenieria de software',
-  year: 2025,
+  year: 2024,
   type: 'Libro',
-  price: 38,
+  price: 42,
   sales: 128,
-  image: '/covers/react-componentes.svg',
-  description: 'Guia practica para construir interfaces SPA modernas.',
+  image: 'https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg',
+  description: 'Practicas profesionales para escribir codigo legible.',
 };
 
 const secondBook = {
   ...book,
   id: 2,
-  title: 'Testing de Aplicaciones SPA',
-  author: 'Jorge Prieto',
+  title: 'Design Patterns',
+  author: 'Erich Gamma, Richard Helm, Ralph Johnson y John Vlissides',
   year: 2023,
-  price: 33,
+  price: 48,
 };
 
 const space = {
@@ -117,7 +117,7 @@ describe('Actividad 3 - componentes probados con React Testing Library', () => {
   it('BookCard muestra datos y enlaces de libro', () => {
     renderWithRouter(<BookCard book={book} />);
 
-    expect(screen.getByRole('img', { name: /portada de react aplicado/i })).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: /portada de clean code/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: book.title })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /ver detalle/i })).toHaveAttribute('href', '/libreria/1');
     expect(screen.getByRole('link', { name: /comprar/i })).toHaveAttribute('href', '/comprar/1');
