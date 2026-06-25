@@ -3,6 +3,8 @@
 - Ejecutar `npm install`.
 - Ejecutar `npm run api` para levantar la API simulada.
 - Ejecutar `npm run dev` en otra terminal para probar la SPA.
+- Probar responsividad en 390 x 844, 430 x 932, 768 x 1024 y 1024 x 768 desde DevTools.
+- Ejecutar `npm run test` y confirmar que las pruebas terminan sin errores.
 - Ejecutar `npm run build` y confirmar que termina sin errores.
 - Probar endpoints en Postman usando `POSTMAN_API.md`.
 - Subir el proyecto a GitHub sin `node_modules` ni `dist`.
@@ -16,6 +18,6 @@
 ## Datos utiles
 
 - Carpeta del proyecto: `nexus-spa-react`.
-- ZIP generado: `Aguayo_Caceres_Stteffano_DWC_Actividad2_Nexus_SPA.zip`.
+- ZIP sugerido: `Aguayo_Caceres_Stteffano_DWC_Actividad3_Nexus_SPA.zip`.
 - Usuario demo: `alumno@nexus.edu`.
 - Password demo: `123456`.

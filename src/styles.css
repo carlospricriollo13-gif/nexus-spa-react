@@ -5,7 +5,7 @@
 }
 
 * { box-sizing: border-box; }
-body { margin: 0; min-width: 1100px; }
+body { margin: 0; min-width: 320px; }
 a { color: #315f52; font-weight: 700; text-decoration: none; }
 button, .button { background: #315f52; border: 0; border-radius: 999px; color: white; cursor: pointer; display: inline-block; font-weight: 800; padding: 0.75rem 1rem; }
 button:hover, .button:hover { background: #223f38; }
@@ -52,3 +52,43 @@ label { display: grid; gap: 0.4rem; font-weight: 700; }
 .reservations-table { border-collapse: collapse; overflow: hidden; width: 100%; }
 .reservations-table th, .reservations-table td { border-bottom: 1px solid #e2d8c8; padding: 0.9rem; text-align: left; }
 .reservations-table th { background: #efe5d5; color: #172033; }
+
+@media (max-width: 1024px) {
+  .topbar { align-items: flex-start; flex-wrap: wrap; gap: 1rem; padding: 1rem 1.25rem; }
+  .nav { flex-wrap: wrap; gap: 0.75rem; }
+  .container { padding: 1.25rem; }
+  .hero { grid-template-columns: 1fr; padding: 2rem; }
+  .hero h1 { font-size: 2.35rem; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .catalog-layout { grid-template-columns: 230px 1fr; }
+  .sidebar { top: 110px; }
+}
+
+@media (max-width: 768px) {
+  .topbar { position: static; }
+  .brand { width: 100%; }
+  .nav, .session { width: 100%; }
+  .nav { justify-content: space-between; }
+  .session { justify-content: flex-start; }
+  .hero { border-radius: 24px; padding: 1.5rem; }
+  .hero h1 { font-size: 2rem; }
+  .grid, .content-grid { grid-template-columns: 1fr; }
+  .catalog-layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+  .detail { flex-direction: column; }
+  .large { max-width: 100%; width: 100%; }
+  .reservations-panel { overflow-x: auto; }
+  .reservations-table { min-width: 560px; }
+}
+
+@media (max-width: 430px) {
+  button, .button { text-align: center; width: 100%; }
+  .topbar { padding: 0.9rem; }
+  .nav, .session, .card-actions { align-items: stretch; flex-direction: column; }
+  .container { padding: 0.9rem; }
+  .hero { padding: 1.15rem; }
+  .hero h1 { font-size: 1.65rem; }
+  .card { border-radius: 18px; padding: 1rem; }
+  .book-card .card-actions { align-items: stretch; }
+  .form-page { min-height: auto; place-items: stretch; }
+}
