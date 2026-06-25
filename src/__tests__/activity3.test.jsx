@@ -123,12 +123,12 @@ describe('Actividad 3 - componentes probados con React Testing Library', () => {
     expect(screen.getByRole('link', { name: /comprar/i })).toHaveAttribute('href', '/comprar/1');
   });
 
-  it('SpaceCard muestra estado ocupado y enlaces de reserva', () => {
+  it('SpaceCard muestra estado ocupado y bloquea la reserva', () => {
     renderWithRouter(<SpaceCard space={space} />);
 
     expect(screen.getByRole('heading', { name: space.name })).toBeInTheDocument();
     expect(screen.getByText(/ocupado por maria lopez/i)).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /reservar/i })).toHaveAttribute('href', '/reservar/1');
+    expect(screen.getByText(/no disponible/i)).toHaveAttribute('aria-disabled', 'true');
   });
 
   it('Layout muestra navegacion y login cuando no hay sesion', () => {
@@ -168,11 +168,17 @@ describe('Actividad 3 - componentes probados con React Testing Library', () => {
   });
 
   it('BookStorePage muestra categorias, filtros y catalogo', async () => {
+    const user = userEvent.setup();
     renderWithRouter(<BookStorePage />);
 
     expect(await screen.findByRole('button', { name: /ingenieria de software/i })).toBeInTheDocument();
     expect(screen.getByLabelText(/ano/i)).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: book.title })).toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: /ocultar categorias y filtros/i }));
+
+    expect(screen.queryByRole('button', { name: /ingenieria de software/i })).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /mostrar categorias y filtros/i })).toHaveAttribute('aria-expanded', 'false');
   });
 
   it('CoworkingPage muestra espacios y reservas', async () => {
@@ -233,6 +239,7 @@ describe('Actividad 3 - componentes probados con React Testing Library', () => {
 
   it('ReservationPage registra una reserva simulada', async () => {
     const user = userEvent.setup();
+    serviceMocks.getSpaceById.mockResolvedValueOnce(availableSpace);
     renderWithRouter(
       <Routes>
         <Route path="/reservar/:spaceId" element={<ReservationPage />} />
@@ -240,7 +247,7 @@ describe('Actividad 3 - componentes probados con React Testing Library', () => {
       ['/reservar/1']
     );
 
-    await screen.findByRole('heading', { name: space.name });
+    await screen.findByRole('heading', { name: availableSpace.name });
     await user.type(screen.getByLabelText(/fecha/i), '2026-06-26');
     await user.type(screen.getByLabelText(/desde/i), '09:00');
     await user.type(screen.getByLabelText(/hasta/i), '10:00');

@@ -15,7 +15,11 @@ export default function SpaceCard({ space }) {
       </div>
       <div className="card-actions">
         <Link to={`/coworking/${space.id}`}>Ver espacio</Link>
-        <Link className="button" to={`/reservar/${space.id}`}>Reservar</Link>
+        {space.occupied ? (
+          <span className="button disabled" aria-disabled="true">No disponible</span>
+        ) : (
+          <Link className="button" to={`/reservar/${space.id}`}>Reservar</Link>
+        )}
       </div>
     </article>
   );

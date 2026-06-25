@@ -62,10 +62,12 @@ Recorrer la aplicacion en el navegador:
 - Landing con 10 libros mas vendidos.
 - Login con `alumno@nexus.edu` y `123456`.
 - Catalogo con menu lateral, categorias y filtros.
+- Mostrar que el menu lateral de libreria se puede ocultar y volver a desplegar.
 - Detalle individual de libro o revista.
 - Compra simulada.
 - Libros adquiridos previamente.
 - Vista de espacios de co-working.
+- Mostrar que los espacios ocupados aparecen como no disponibles para reserva.
 - Detalle individual de espacio.
 - Reserva simulada.
 

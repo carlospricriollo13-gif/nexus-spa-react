@@ -12,6 +12,8 @@ Aplicacion web SPA para la Actividad 3 de Desarrollo Web Orientado a Componentes
 - API simulada en `src/services/mockApi.js` con datos de `src/data/mockData.js`.
 - API HTTP simulada con `json-server` y datos en `db.json`, lista para probar en Postman.
 - Vistas de landing, libreria, categorias/filtros, detalle de libro, libros adquiridos, compra, co-working, detalle de espacio y reserva.
+- Menu lateral desplegable para categorias y filtros de libreria.
+- Bloqueo de reserva para espacios de co-working ocupados.
 - Responsividad para moviles y tablets mediante media queries en `src/styles.css`.
 - Tests con React Testing Library y Vitest sobre mas de diez componentes/vistas.
 

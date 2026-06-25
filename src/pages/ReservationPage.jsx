@@ -22,6 +22,19 @@ export default function ReservationPage() {
   if (loading) return <p>Cargando reserva...</p>;
   if (!space) return <p>No se encontro el espacio solicitado.</p>;
 
+  if (space.occupied) {
+    return (
+      <section className="form-page">
+        <div className="card form">
+          <p className="eyebrow">Espacio no disponible</p>
+          <h1>{space.name}</h1>
+          <p className="busy">Este espacio esta ocupado por {space.occupiedBy} de {space.from} a {space.until}.</p>
+          <p className="muted">Selecciona otro espacio disponible desde la vista de co-working.</p>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="form-page">
       <form className="card form" onSubmit={handleSubmit}>

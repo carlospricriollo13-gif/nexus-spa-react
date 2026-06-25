@@ -9,6 +9,7 @@ body { margin: 0; min-width: 320px; }
 a { color: #315f52; font-weight: 700; text-decoration: none; }
 button, .button { background: #315f52; border: 0; border-radius: 999px; color: white; cursor: pointer; display: inline-block; font-weight: 800; padding: 0.75rem 1rem; }
 button:hover, .button:hover { background: #223f38; }
+.button.disabled { background: #8f978f; cursor: not-allowed; }
 input, select { border: 1px solid #d7cbb8; border-radius: 12px; font: inherit; padding: 0.75rem; width: 100%; }
 label { display: grid; gap: 0.4rem; font-weight: 700; }
 
@@ -36,6 +37,8 @@ label { display: grid; gap: 0.4rem; font-weight: 700; }
 .sidebar { background: #fffaf2; border-radius: 22px; display: grid; gap: 0.8rem; padding: 1.25rem; position: sticky; top: 92px; }
 .sidebar button { background: #efe5d5; color: #172033; text-align: left; }
 .sidebar button.selected { background: #c47a4b; color: white; }
+.sidebar-toggle { background: #315f52 !important; color: white !important; text-align: center !important; }
+.sidebar-content { display: grid; gap: 0.8rem; }
 .content-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
 .detail { align-items: start; display: flex; gap: 2rem; }
